@@ -23,15 +23,14 @@ public class DeleteTest {
 		
 		try {
 			// 1. JDBC Driver(MySQL) Loading
-			Class.forName("com.mysql.jdbc.Driver");
+			Class.forName("org.mariadb.jdbc.Driver");
 
 			// 2. 연결하기
-			String url = "jdbc:mysql://127.0.0.1:3306/webdb";
+			String url = "jdbc:mysql://192.168.1.103:3307/webdb";
 			conn = DriverManager.getConnection(url, "webdb", "webdb");
 			
 			// 3. Statement 객체 생성
 			stmt = conn.createStatement();
-			
 			
 			// 4. SQL문 실행
 //	-----------------여기서부터-------------------------------------------------------------------

@@ -10,10 +10,10 @@ public class ConnectionTest {
 		Connection connection = null;
 		try {
 			// 1. JDBC Driver(MySQL) Loading
-			Class.forName("com.mysql.jdbc.Driver");
+			Class.forName("org.mariadb.jdbc.Driver");
 
 			// 2. 연결하기
-			String url = "jdbc:mysql://127.0.0.1:3306/webdb";
+			String url = "jdbc:mysql://192.168.1.103:3307/webdb";
 			connection = DriverManager.getConnection(url, "webdb", "webdb");
 			System.out.println("연결성공!");
 		} catch (ClassNotFoundException e) {
